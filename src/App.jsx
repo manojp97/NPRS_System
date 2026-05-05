@@ -10,7 +10,6 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-  
         {/* Protected Route */}
         <Route
           path="/"
