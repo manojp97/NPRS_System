@@ -1,4 +1,4 @@
-import express from "express";
+import express from "express";  // express v4.18.2
 import cors from "cors";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
