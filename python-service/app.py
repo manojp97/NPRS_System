@@ -3,6 +3,8 @@ from utils.plateDetector import detect_number_plate
 
 app = Flask(__name__)
 
+
+
 @app.route("/detect", methods=["POST"])
 def detect_plate():
     try:
