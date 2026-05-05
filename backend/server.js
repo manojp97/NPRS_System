@@ -14,6 +14,7 @@ app.use(cors());
 app.use(express.json());
 
 
+// ✅ Static folder for uploaded images
 app.use("/uploads", express.static("uploads"));
 
 // ✅ DB connect
