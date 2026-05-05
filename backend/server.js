@@ -13,7 +13,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// ✅ static folder (IMAGE FIX 🔥)
+
 app.use("/uploads", express.static("uploads"));
 
 // ✅ DB connect
