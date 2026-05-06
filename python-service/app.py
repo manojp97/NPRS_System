@@ -7,6 +7,7 @@ app = Flask(__name__)
 
 @app.route("/detect", methods=["POST"])
 def detect_plate():
+    # Check if an image file is included in the request
     try:
         if "image" not in request.files:
             return jsonify({"error": "No file uploaded"})
@@ -20,11 +21,12 @@ def detect_plate():
         return jsonify({
             "plate_number": result
         })
-
+    # Catch any exceptions and return an error message
     except Exception as e:
         return jsonify({
             "error": str(e)
         })
 
 if __name__ == "__main__":
+    # use port 5001 to avoid conflicts with other services
     app.run(port=5001, debug=True)
